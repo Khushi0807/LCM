@@ -1,0 +1,22 @@
+#include<stdio.h>
+int LCM(int n1,int n2)
+{
+  static int common = 1;
+  if( common%n1==0 && common % n2==0)
+  {
+  	return common;
+ }
+ common++;
+ LCM(n1,n2);
+ return common;
+
+}
+
+int main()
+{
+	int a, b , result;
+	printf("Enter two numbers = ");
+	scanf("%d%d",&a,&b);
+	result=LCM(a,b);                                                                              //function calling
+	printf(" LCM of two given number are = %d",result);
+}
